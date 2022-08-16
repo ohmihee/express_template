@@ -1,5 +1,6 @@
 import { Router } from "express";
 const router = Router();
+import prisma from "../../config/prisma.js";
 
 /**
  * @swagger
@@ -18,7 +19,14 @@ const router = Router();
  *         type: string
  */
 
-router.get("/profile", (req, res) => {
+router.get("/profile", async (req, res) => {
+  const result = await prisma.user.create({
+    data: {
+      nickName: "nick",
+      password: "password",
+    },
+  });
+  console.log(result);
   res.json({ user: "user" });
 });
 

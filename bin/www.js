@@ -1,7 +1,7 @@
 import http from "http";
 import app from "../server/index.js";
 import Logger from "../utils/logger.js";
-import { dbConnect } from "../config/databaseConfig.js";
+//import { dbConnect } from "../config/databaseConfig.js";
 
 const logger = new Logger();
 
@@ -55,7 +55,7 @@ function onListening() {
   const bind = typeof addr === "string" ? `pipe ${addr}` : `port ${addr.port}`;
 
   logger.log(`the server started listining on port ${bind}`, "info");
-  dbConnect();
+  //dbConnect();
 }
 
 server.listen(port);

@@ -34,6 +34,9 @@ app.use(
 );
 app.use(cors());
 
+import router from "../router/index.js";
+app.use("/api/v1", router);
+
 process.on("SIGNINT", () => {
   logger.log("stopping the server", "info");
   process.exit();
@@ -43,10 +46,6 @@ process.on("SIGNINT", () => {
 
 app.set("port", process.env.DEV_APP_PORT);
 app.use("/api/docs", swagger.router);
-// app.get("/", (req, res) => {
-//   const payload = "dkssdjssdjfkalsjfklasjklfjlkakssdjfkalsjfklasajk";
-//   res.send(payload.repeat(10000));
-// });
 
 app.use((req, res, next) => {
   logger.log(
