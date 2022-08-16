@@ -1,0 +1,29 @@
+{
+  "development": {
+    "url": "mysql://root:root@localhost:3306/iLrn",
+    "username": "root",
+    "password": "root",
+    "database": "iLrn",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "test": {
+    "url": "mysql://root:root@localhost:5432/iLrn",
+    "username": "root",
+    "password": "root",
+    "database": "iLrn",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  },
+  "production": {
+    "url": "mysql://root:root@localhost:5432/iLrn",
+    "username": "root",
+    "password": "root",
+    "database": "iLrn",
+    "host": "127.0.0.1",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
