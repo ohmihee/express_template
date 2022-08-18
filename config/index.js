@@ -9,7 +9,7 @@ export default {
   },
   db: {
     port: process.env.DB_PORT || 3306,
-    database: process.env.DB_NAME || "",
+    database: process.env.DB_NAME || "mydb",
     password: process.env.DB_PASS || "password",
     username: process.env.DB_USER || "root",
     host: process.env.DB_HOST || "127.0.0.1",

@@ -1,5 +1,6 @@
 import { Router } from "express";
 const router = Router();
+import { execute, query } from "../../config/databaseConfig.js";
 
 /**
  * @swagger
@@ -18,7 +19,8 @@ const router = Router();
  *         type: string
  */
 
-router.get("/profile", (req, res) => {
+router.get("/profile", async (req, res) => {
+  query("create table test (uId int)");
   res.json({ user: "user" });
 });
 

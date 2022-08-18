@@ -14,11 +14,9 @@ export default (sequelize, DataTypes) => {
       },
       email: {
         type: DataTypes.STRING,
-        allowNull: false,
       },
       user_image: {
         type: DataTypes.STRING,
-        allowNull: true,
       },
       mobile_number: {
         type: DataTypes.STRING,

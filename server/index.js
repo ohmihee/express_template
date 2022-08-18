@@ -47,6 +47,8 @@ app.use("/api/docs", swagger.router);
 //   const payload = "dkssdjssdjfkalsjfklasjklfjlkakssdjfkalsjfklasajk";
 //   res.send(payload.repeat(10000));
 // });
+import router from "../router/index.js";
+app.use("/api/v1", router);
 
 app.use((req, res, next) => {
   logger.log(
