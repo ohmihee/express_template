@@ -36,4 +36,8 @@ export default {
       process.env.REPRESH_TOKEN_SECRET || "asdfasdfasdfasdf",
     refresh_token_expiresin: process.env.REPRESH_TOKEN_EXPIRESIN || "2d",
   },
+  sendgrid: {
+    sendgrid_id: process.env.SENDGRID_ID,
+    sendgrid_key: process.env.SENDGRID_KEY,
+  },
 };

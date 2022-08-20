@@ -5,10 +5,31 @@ import compression from "compression";
 import config from "../config/index.js";
 import Logger from "../utils/logger.js";
 import * as swagger from "../utils/swagger.js";
+import * as helmet from "helmet";
 
 const logger = new Logger();
 
 const app = express();
+/**
+ * ------------------------------
+ * helmet: used for security
+ * ------------------------------
+ */
+app.use(helmet.contentSecurityPolicy());
+app.use(helmet.crossOriginEmbedderPolicy());
+app.use(helmet.crossOriginOpenerPolicy());
+app.use(helmet.crossOriginResourcePolicy());
+app.use(helmet.dnsPrefetchControl());
+app.use(helmet.expectCt());
+app.use(helmet.frameguard());
+app.use(helmet.hidePoweredBy());
+app.use(helmet.hsts());
+app.use(helmet.ieNoOpen());
+app.use(helmet.noSniff());
+app.use(helmet.originAgentCluster());
+app.use(helmet.permittedCrossDomainPolicies());
+app.use(helmet.referrerPolicy());
+app.use(helmet.xssFilter());
 
 app.set("config", config);
 app.use(bodyParser.json());

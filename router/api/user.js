@@ -20,6 +20,7 @@ import prisma from "../../config/prisma.js";
  */
 
 router.get("/profile", async (req, res) => {
+<<<<<<< HEAD
   const result = await prisma.user.create({
     data: {
       nickName: "nick",
@@ -27,6 +28,9 @@ router.get("/profile", async (req, res) => {
     },
   });
   console.log(result);
+=======
+  //await query("create table test (uId int)");
+>>>>>>> a918add (feat: add email)
   res.json({ user: "user" });
 });
 
