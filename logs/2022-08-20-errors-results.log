@@ -1,0 +1,8 @@
+2022-08-20 14:14:23 error : error ,Error during processing request at : Sat Aug 20 2022 14:14:23 GMT+0900 (대한민국 표준시) details message: Forbidden (403)
+  The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
+    from
+    null
+2022-08-20 14:15:12 error : error ,Error during processing request at : Sat Aug 20 2022 14:15:12 GMT+0900 (대한민국 표준시) details message: [object Object]
+2022-08-20 14:15:35 error : error ,Error during processing request at : Sat Aug 20 2022 14:15:35 GMT+0900 (대한민국 표준시) details message: [object Object]
+2022-08-20 14:16:14 error : error ,Error during processing request at : Sat Aug 20 2022 14:16:14 GMT+0900 (대한민국 표준시) details message: undefined
+2022-08-20 14:16:50 error : error ,Error during processing request at : Sat Aug 20 2022 14:16:50 GMT+0900 (대한민국 표준시) details message: The from address does not match a verified Sender Identity. Mail cannot be sent until this error is resolved. Visit https://sendgrid.com/docs/for-developers/sending-email/sender-identity/ to see the Sender Identity requirements
