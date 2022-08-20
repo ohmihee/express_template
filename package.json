@@ -12,11 +12,8 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-<<<<<<< HEAD
     "@prisma/client": "^4.2.1",
-=======
     "@sendgrid/mail": "^7.7.0",
->>>>>>> a918add (feat: add email)
     "body-parser": "^1.20.0",
     "compression": "^1.7.4",
     "cors": "^2.8.5",
