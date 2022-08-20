@@ -20,7 +20,7 @@ import { execute, query } from "../../config/databaseConfig.js";
  */
 
 router.get("/profile", async (req, res) => {
-  query("create table test (uId int)");
+  //await query("create table test (uId int)");
   res.json({ user: "user" });
 });
 
