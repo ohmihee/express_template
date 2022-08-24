@@ -7,6 +7,9 @@ import Logger from "../utils/logger.js";
 import * as swagger from "../utils/swagger.js";
 import * as helmet from "helmet";
 
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
 const logger = new Logger();
 
 const app = express();
@@ -35,8 +38,6 @@ app.set("config", config);
 app.use(bodyParser.json());
 // 데이터를 json형태로 파싱하여 준다.
 
-import { createRequire } from "module";
-const require = createRequire(import.meta.url);
 app.use(require("method-override")());
 
 app.use(
@@ -55,6 +56,11 @@ app.use(
 );
 app.use(cors());
 
+//const { swaggerUi, specs } = require("../utils/swagger.js");
+import { swaggerUi, specs } from "../utils/swagger.js";
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
 process.on("SIGNINT", () => {
   logger.log("stopping the server", "info");
   process.exit();
@@ -63,7 +69,7 @@ process.on("SIGNINT", () => {
 // 해당 첫번째 인자에 해당하는 이벤트 발생시 특정한 적업을 하도록 설정할 수 있다.
 
 app.set("port", process.env.DEV_APP_PORT);
-app.use("/api/docs", swagger.router);
+// app.use("/api/docs", swagger.router);
 // app.get("/", (req, res) => {
 //   const payload = "dkssdjssdjfkalsjfklasjklfjlkakssdjfkalsjfklasajk";
 //   res.send(payload.repeat(10000));

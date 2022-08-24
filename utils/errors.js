@@ -126,5 +126,5 @@ export const errors = {
 //   console.log("즉시 실행");
 // })();
 
-console.log(errors.updateSuccess());
+console.log(errors.invalidId());
 export default errors;
