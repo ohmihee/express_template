@@ -4,7 +4,7 @@ import cors from "cors";
 import compression from "compression";
 import config from "../config/index.js";
 import Logger from "../utils/logger.js";
-import * as swagger from "../utils/swagger.js";
+// import * as swagger from "../utils/swagger.js";
 import * as helmet from "helmet";
 
 const logger = new Logger();
@@ -55,6 +55,10 @@ app.use(
 );
 app.use(cors());
 
+import { swaggerUi, specs } from "../utils/swagger.js";
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(specs));
+
 import router from "../router/index.js";
 app.use("/api/v1", router);
 
@@ -66,7 +70,7 @@ process.on("SIGNINT", () => {
 // 해당 첫번째 인자에 해당하는 이벤트 발생시 특정한 적업을 하도록 설정할 수 있다.
 
 app.set("port", process.env.DEV_APP_PORT);
-app.use("/api/docs", swagger.router);
+// app.use("/api/docs", swagger.router);
 
 app.use((req, res, next) => {
   logger.log(

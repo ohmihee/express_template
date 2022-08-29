@@ -20,17 +20,13 @@ import prisma from "../../config/prisma.js";
  */
 
 router.get("/profile", async (req, res) => {
-<<<<<<< HEAD
-  const result = await prisma.user.create({
-    data: {
-      nickName: "nick",
-      password: "password",
-    },
-  });
-  console.log(result);
-=======
-  //await query("create table test (uId int)");
->>>>>>> a918add (feat: add email)
+  // const result = await prisma.user.create({
+  //   data: {
+  //     nickName: "nick",
+  //     password: "password",
+  //   },
+  // });
+  //console.log(result);
   res.json({ user: "user" });
 });
 
